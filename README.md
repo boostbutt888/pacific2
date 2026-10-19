@@ -5,23 +5,24 @@ Multi-tenant, web-based F&B SaaS (POS, self-order kiosk, KDS, QMS, QR ordering, 
 **State: repo skeleton, `0.7.0` (Architecture phase, Gate G5).** Only the money/tax package has real logic. Every other app is a shell. Feature work follows the T-### tasks in `docs/tech/SPRINT_PLAN.md`.
 
 Design docs live next to this repo, in `../docs/` (the docs workspace is not part of this repo):
+
 - `docs/tech/ARCHITECTURE.md`, `docs/tech/adr/`, `docs/tech/DATA_MODEL.md`, `docs/tech/API.md`, `docs/tech/SECURITY.md`
 - `docs/tech/SPRINT_PLAN.md` (T-### tasks), `docs/tech/BUILD_LOG.md`
 
 ## Layout
 
-| Path | What | Stack |
-|---|---|---|
-| `apps/api` | REST `/v1` API. Later also runs the realtime gateway and the worker as separate entry points (ADR-003) | NestJS 10, Node 22 |
-| `apps/backoffice` | Back Office + Site Builder, static export, all data via the API (ADR-001 R1) | Next.js 15, React 19 |
-| `apps/pos` | Counter POS PWA (offline cash, ADR-007) | React 19 + Vite 6 |
-| `apps/sok` | Self-order kiosk PWA | React 19 + Vite 6 |
-| `apps/kds` | Kitchen display PWA | React 19 + Vite 6 |
-| `apps/qms` | Queue board PWA | React 19 + Vite 6 |
-| `apps/cop` | Customer ordering portal (Pickup QR) + status page | React 19 + Vite 6 |
-| `packages/money` | Integer-cent money, GST per store order, largest-remainder allocation, cash rounding, gateway fee (ADR-009) | TypeScript, Vitest |
-| `packages/tokens` | Design tokens synced from `docs/ui/tokens.json` (G4 approved) | JSON + CSS variables |
-| `packages/contracts` | Shared enums and real-time event schemas | zod |
+| Path                 | What                                                                                                        | Stack                |
+| -------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------- |
+| `apps/api`           | REST `/v1` API. Later also runs the realtime gateway and the worker as separate entry points (ADR-003)      | NestJS 10, Node 22   |
+| `apps/backoffice`    | Back Office + Site Builder, static export, all data via the API (ADR-001 R1)                                | Next.js 15, React 19 |
+| `apps/pos`           | Counter POS PWA (offline cash, ADR-007)                                                                     | React 19 + Vite 6    |
+| `apps/sok`           | Self-order kiosk PWA                                                                                        | React 19 + Vite 6    |
+| `apps/kds`           | Kitchen display PWA                                                                                         | React 19 + Vite 6    |
+| `apps/qms`           | Queue board PWA                                                                                             | React 19 + Vite 6    |
+| `apps/cop`           | Customer ordering portal (Pickup QR) + status page                                                          | React 19 + Vite 6    |
+| `packages/money`     | Integer-cent money, GST per store order, largest-remainder allocation, cash rounding, gateway fee (ADR-009) | TypeScript, Vitest   |
+| `packages/tokens`    | Design tokens synced from `docs/ui/tokens.json` (G4 approved)                                               | JSON + CSS variables |
+| `packages/contracts` | Shared enums and real-time event schemas                                                                    | zod                  |
 
 ## Prerequisites
 
