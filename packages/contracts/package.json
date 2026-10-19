@@ -1,0 +1,23 @@
+{
+  "name": "@pacific2/contracts",
+  "version": "0.7.0",
+  "private": true,
+  "description": "Shared domain enums, REST DTOs and real-time event schemas (zod). API.md is generated from here in Sprint 0.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

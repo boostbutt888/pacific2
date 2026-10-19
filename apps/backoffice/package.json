@@ -1,0 +1,25 @@
+{
+  "name": "@pacific2/backoffice",
+  "version": "0.7.0",
+  "private": true,
+  "description": "Back Office + Site Builder (Next.js, static export, client-rendered against the API only; ADR-001 R1).",
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@pacific2/contracts": "workspace:*",
+    "@pacific2/money": "workspace:*",
+    "@pacific2/tokens": "workspace:*",
+    "next": "^15.1.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "typescript": "~5.7.2"
+  }
+}

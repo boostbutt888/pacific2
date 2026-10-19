@@ -1,0 +1,13 @@
+node_modules/
+dist/
+out/
+.next/
+.turbo/
+coverage/
+*.log
+.DS_Store
+# Secrets never live in the repo (SECURITY.md §4). Only .env.example is committed.
+.env
+.env.*
+!.env.example
+*.tsbuildinfo

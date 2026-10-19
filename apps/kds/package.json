@@ -1,0 +1,27 @@
+{
+  "name": "@pacific2/kds",
+  "version": "0.7.0",
+  "private": true,
+  "description": "Kitchen display PWA: tickets per store and station, bump, recall, Ready tray.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5103 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 5103",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@pacific2/contracts": "workspace:*",
+    "@pacific2/money": "workspace:*",
+    "@pacific2/tokens": "workspace:*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.6"
+  }
+}
